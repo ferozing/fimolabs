@@ -213,3 +213,28 @@ dialog::backdrop { background: rgba(26, 25, 24, 0.45); backdrop-filter: blur(2px
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }
 }
+
+/* About */
+.about-inner { display: flex; flex-wrap: wrap; align-items: center; gap: 32px 64px; padding-top: clamp(56px, 8vw, 96px); padding-bottom: clamp(56px, 8vw, 96px); }
+.about-line { flex: 1 1 380px; min-width: 0; font-weight: 500; font-size: clamp(24px, 3vw, 36px); line-height: 1.2; letter-spacing: -0.02em; }
+.about-label { display: block; margin-bottom: 12px; font-size: 14px; font-weight: 600; letter-spacing: 0; color: var(--accent); }
+
+/* Footer: let links wrap on small screens */
+.footer nav { flex-wrap: wrap; gap: 0 24px; }
+
+/* Simple content pages */
+.doc { max-width: 760px; padding-top: clamp(32px, 6vw, 72px); padding-bottom: clamp(64px, 9vw, 112px); }
+.doc h1 { font-size: clamp(40px, 6vw, 72px); line-height: 1; letter-spacing: -0.035em; }
+.doc .updated { margin-top: 14px; font-size: 15px; color: var(--text-3); }
+.doc h2 { margin-top: 44px; font-size: clamp(24px, 3vw, 30px); line-height: 1.15; letter-spacing: -0.02em; }
+.doc p, .doc ul { margin: 14px 0 0; color: var(--text-2); }
+.doc ul { padding-left: 22px; }
+.doc li + li { margin-top: 6px; }
+.doc a { color: var(--accent); text-underline-offset: 3px; }
+.doc strong { color: var(--ink); }
+.callout { margin-top: 28px; background: var(--peach-soft); border-radius: 18px; padding: 18px 22px; color: var(--ink); }
+.contact-list { margin-top: 36px; display: grid; gap: 14px; }
+.contact-item { background: var(--white); border-radius: 20px; padding: 22px 24px; box-shadow: 0 1px 2px rgba(26, 25, 24, 0.04), 0 16px 40px rgba(26, 25, 24, 0.06); }
+.contact-item dt { font-size: 14px; font-weight: 600; color: var(--text-3); }
+.contact-item dd { margin: 6px 0 0; font-size: 20px; font-weight: 600; color: var(--ink); }
+.contact-item dd a { color: var(--ink); min-height: 44px; display: inline-flex; align-items: center; }
