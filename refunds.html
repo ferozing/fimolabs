@@ -5,22 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Refund and cancellation policy · Fimo Labs</title>
   <meta name="description" content="How cancellations and refunds work for Parent Check In.">
+  <meta property="og:title" content="Refund and cancellation policy · Fimo Labs">
+  <meta property="og:description" content="How cancellations and refunds work for Parent Check In.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/checkin.css">
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/site.css">
 </head>
 <body>
-
-<header class="wrap nav">
-  <a class="brand" href="/"><span class="brand-mark" aria-hidden="true"><span></span></span>Fimo Labs</a>
-  <nav aria-label="Main">
-    <a class="nav-link" href="/">Home</a>
+<header class="site-header">
+  <nav aria-label="Main" class="nav">
+    <a href="/#top" class="brand">
+      <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="11" fill="none" stroke="#0A0B0D" stroke-width="3"></circle><circle cx="23.5" cy="6.5" r="4.5" fill="#FF6A3D" stroke="#F5F4EF" stroke-width="2"></circle></svg>
+      <span>Fimo Labs</span>
+    </a>
+    <div class="nav-links">
+      <a href="/#thesis">Thesis</a>
+      <a href="/#engine">Engine</a>
+      <a href="/#products">Products</a>
+      <a href="/#roadmap">Roadmap</a>
+      <a href="/#contact" class="nav-cta">Get in touch</a>
+    </div>
   </nav>
 </header>
-
-<main class="wrap doc">
-<h1>Refunds and cancellation</h1>
+<main class="doc">
+  <div class="doc-inner">
+  <h1>Refunds and cancellation</h1>
   <p class="updated">Last updated 4 October 2026</p>
 
   <h2>Cancel anytime</h2>
@@ -34,18 +45,45 @@
 
   <h2>Billing questions</h2>
   <p>If you see a charge you don't expect, or have any billing issue, write to <a href="mailto:pm.ferozmd@gmail.com">pm.ferozmd@gmail.com</a> and we will sort it out.</p>
+  </div>
 </main>
-
-<footer class="wrap footer">
-  <span class="strong">© 2026 Fimo Labs</span>
-  <nav aria-label="Footer">
-    <a href="/contact">Contact</a>
-    <a href="/privacy">Privacy</a>
-    <a href="/terms">Terms</a>
-    <a href="/refunds">Refunds</a>
-  </nav>
-  <span class="muted">Made with care in India</span>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-about">
+        <div class="footer-brand">
+          <svg width="28" height="28" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="11" fill="none" stroke="#F5F4EF" stroke-width="3"></circle><circle cx="23.5" cy="6.5" r="4.5" fill="#FF6A3D" stroke="#0A0B0D" stroke-width="2"></circle></svg>
+          <span>Fimo Labs</span>
+        </div>
+        <span>Applied AI for everyday care. Built in India.</span>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <span class="mono-label">Products</span>
+          <a href="https://checkin.fimolabs.com">Checkin</a>
+          <a href="#" data-oyesun>Oyesun</a>
+        </div>
+        <div class="footer-col">
+          <span class="mono-label">Company</span>
+          <a href="/#thesis">Thesis</a>
+          <a href="/#engine">Engine</a>
+          <a href="/#roadmap">Roadmap</a>
+        </div>
+        <div class="footer-col">
+          <span class="mono-label">Legal</span>
+          <a href="/contact">Contact</a>
+          <a href="/privacy">Privacy</a>
+          <a href="/terms">Terms</a>
+          <a href="/refunds">Refunds</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Fimo Labs is owned and run by <strong>Feroz</strong>, Product Manager. Contact: <a href="mailto:pm.ferozmd@gmail.com">pm.ferozmd@gmail.com</a></span>
+      <span>© 2026 Fimo Labs</span>
+    </div>
+  </div>
 </footer>
-
+<script src="/site.js"></script>
 </body>
 </html>

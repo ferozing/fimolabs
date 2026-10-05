@@ -3,231 +3,217 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Parent Check In · A daily call for your parents</title>
-  <meta name="description" content="Sona calls your Mom or Papa on their normal phone every day. You get a short note on WhatsApp, and something to ask them. Invite only.">
-  <meta property="og:title" content="Parent Check In">
-  <meta property="og:description" content="A daily call for your parents. A daily update for you.">
+  <title>Fimo Labs · Applied AI for everyday care</title>
+  <meta name="description" content="Fimo Labs builds voice first AI that checks in, listens and notices, in the languages people actually speak. Starting with India's families.">
+  <meta property="og:title" content="Fimo Labs · Applied AI for everyday care">
+  <meta property="og:description" content="Fimo Labs builds voice first AI that checks in, listens and notices, in the languages people actually speak. Starting with India's families.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="checkin.css">
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/site.css">
 </head>
 <body>
-
-<header class="wrap nav">
-  <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><span></span></span>Parent Check In</a>
-  <nav aria-label="Main">
-    <a class="nav-link" href="#how">How it works</a>
-    <a class="nav-link" href="#pricing">Pricing</a>
-    <button class="btn btn-small" type="button" data-open-access>Get early access</button>
+<header class="site-header">
+  <nav aria-label="Main" class="nav">
+    <a href="#top" class="brand">
+      <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="11" fill="none" stroke="#0A0B0D" stroke-width="3"></circle><circle cx="23.5" cy="6.5" r="4.5" fill="#FF6A3D" stroke="#F5F4EF" stroke-width="2"></circle></svg>
+      <span>Fimo Labs</span>
+    </a>
+    <div class="nav-links">
+      <a href="#thesis">Thesis</a>
+      <a href="#engine">Engine</a>
+      <a href="#products">Products</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#contact" class="nav-cta">Get in touch</a>
+    </div>
   </nav>
 </header>
-
-<main id="top">
-  <section class="wrap hero">
-    <p class="pill">Invite only for now</p>
-    <h1>A daily call for your parents. <em>A daily update for you.</em></h1>
-    <p class="lead">Sona calls Mom or Papa on their normal phone, every day. You get a short note on WhatsApp, and something to ask them.</p>
-    <div class="hero-cta">
-      <button class="btn btn-big" type="button" data-open-access>Get early access
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </button>
-      <span class="muted small">No invite code? <a class="founder-link" href="#" target="_blank" rel="noopener">Message the founder on WhatsApp</a></span>
+<main>
+<section id="top" class="hero">
+  <div class="inner col gap36">
+    <div class="chips">
+      <span class="chip dark">Applied AI for everyday care</span>
+      <span class="chip">Built in India</span>
+      <span class="chip">Est. 2026</span>
     </div>
-
-    <div class="demo" aria-label="Demo: Sona calls Mom, then your update arrives on WhatsApp">
-      <figure class="demo-side">
-        <div class="keypad" id="keypad" aria-hidden="true">
-          <div class="keypad-screen" id="kpScreen">
-            <span class="kp-top" id="kpTop">Incoming call</span>
-            <span class="kp-name">Sona</span>
-            <span class="kp-bottom" id="kpBottom">ringing...</span>
-          </div>
-          <div class="keys">
-            <span class="key key-green"></span><span class="key"></span><span class="key key-red"></span>
-            <span class="key"></span><span class="key"></span><span class="key"></span>
-            <span class="key"></span><span class="key"></span><span class="key"></span>
-            <span class="key"></span><span class="key"></span><span class="key"></span>
-          </div>
+    <h1>Healthcare waits for you to get sick.<span class="blue block">We don't.</span></h1>
+    <div class="hero-row">
+      <p class="hero-lead">Fimo Labs builds voice first AI that checks in, listens and notices, in the languages people actually speak. One engine. Many products. Starting with India's families.</p>
+      <div class="hero-ctas">
+        <a href="#thesis" class="btn-blue">Read our thesis
+          <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4l-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </a>
+        <a href="#contact" class="btn-outline">Partner with us</a>
+      </div>
+    </div>
+    <figure class="year">
+      <div class="year-head">
+        <figcaption>A year in someone's health.</figcaption>
+        <span class="mono-small">Day <span id="yearDay">1</span> of 365</span>
+      </div>
+      <div class="year-grid" id="yearGrid" aria-hidden="true"></div>
+      <div class="year-foot">
+        <div class="year-legend">
+          <span><span class="sq orange"></span>The few days healthcare sees you</span>
+          <span><span class="sq blue-bg"></span>Every other day. Where we show up.</span>
         </div>
-        <figcaption class="demo-cap" id="leftCap">Mom's phone rings at her usual time. She just picks up.</figcaption>
-      </figure>
-
-      <div class="dots" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-
-      <figure class="demo-side">
-        <div class="phone" aria-hidden="true">
-          <div class="phone-screen">
-            <div class="lock" id="lock">
-              <span class="lock-date">Friday, 2 October</span>
-              <span class="lock-time">9:42</span>
-            </div>
-            <div class="notif" id="notif">
-              <span class="app-icon"><span></span></span>
-              <span class="notif-body">
-                <span class="notif-head"><b>Sona · WhatsApp</b>now</span>
-                <span>Mom's update is here. All good. One thing to ask her today.</span>
-              </span>
-            </div>
-            <div class="chat" id="chat">
-              <div class="chat-head"><span class="app-icon round"><span></span></span>Sona · Parent Check In</div>
-              <div class="chat-body">
-                <div class="bubble">
-                  <p class="b-meta">Mom's morning call · 6 min</p>
-                  <p class="b-status"><span class="sdot"></span>All good</p>
-                  <p class="b-text">Had poha and chai. BP tablet taken. Happy and chatty.</p>
-                  <p class="b-ask"><b>Ask her:</b> How are the wedding sweets coming along?</p>
-                  <p class="b-time">9:42 AM</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <figcaption class="demo-cap" id="rightCap">Meanwhile, you're in a meeting.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <section class="band-line">
-    <div class="wrap narrow center statement">
-      <p class="big-quote">You call. <span class="faded">"Khana kha liya?" "Haan." "Sab theek?" "Haan."</span> And then you both run out of things to say.</p>
-      <p class="muted sub">Sona's note gives you something real to talk about. Your call still matters most. We just help it happen.</p>
-    </div>
-  </section>
-
-  <section class="band-sand">
-    <div class="wrap split">
-      <div class="col">
-        <h2>What lands on your phone, <em>every day.</em></h2>
-        <dl class="spec">
-          <div><dt>How they are</dt><dd>One clear signal</dd></div>
-          <div><dt>Medicines</dt><dd>Taken or not</dd></div>
-          <div><dt>Mood</dt><dd>In their own words</dd></div>
-          <div><dt>Something to ask</dt><dd>So you never run out</dd></div>
-        </dl>
+        <span class="mono-tiny">Illustration</span>
       </div>
-      <div class="col notes">
-        <article class="note">
-          <div class="note-head"><span class="note-name">Papa</span><span class="status good"><span class="sdot"></span>All good</span></div>
-          <p class="muted">Morning walk done, knee better. Laughed about the cricket.</p>
-          <p class="note-ask"><em>Ask him</em> who he thinks will win on Sunday.</p>
-        </article>
-        <article class="note offset">
-          <div class="note-head"><span class="note-name">Mom</span><span class="status amber"><span class="sdot"></span>Worth a call today</span></div>
-          <p class="muted">Forgot her evening tablet. Sounded a little tired.</p>
-          <p class="note-ask"><em>Ask her</em> if she got some rest today.</p>
-        </article>
+    </figure>
+  </div>
+</section>
+
+<section class="gap">
+  <div class="inner col gap56">
+    <div class="gap-head">
+      <h2>India is getting older, <span class="grey">and its care system was not built for it.</span></h2>
+      <p>Most will age far from their children, on a basic phone, in a language no health app speaks.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="stat-num">149M</span><span class="stat-label">Indians aged 60 and above today</span></div>
+      <div class="stat"><span class="stat-num orange-text">347M</span><span class="stat-label">expected by 2050</span></div>
+      <div class="stat"><span class="stat-num">1 in 5</span><span class="stat-label">Indians will be elderly by 2050</span></div>
+    </div>
+    <span class="mono-tiny">Source: UNFPA India Ageing Report 2023</span>
+    <div class="why">
+      <div class="why-row"><span class="why-num">Why now 01</span><span class="why-title">Voice AI finally speaks like us.</span><span class="why-desc">Natural conversation in Indian languages, at a cost that works for a daily call.</span></div>
+      <div class="why-row"><span class="why-num">Why now 02</span><span class="why-title">Every family already has the interface.</span><span class="why-desc">A phone call for parents. WhatsApp for their children. No app to download, no habit to change.</span></div>
+      <div class="why-row"><span class="why-num">Why now 03</span><span class="why-title">Families now live apart.</span><span class="why-desc">Children in other cities and countries, parents at home. The daily check in became a gap.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="thesis" class="thesis">
+  <div class="inner col gap40">
+    <span class="mono-label blue">Our thesis</span>
+    <p class="thesis-big">Care is a daily habit, not a hospital event. <span class="grey">The company that earns the daily conversation will shape the future of health.</span></p>
+    <p class="thesis-body">So we start small and daily. A call that asks if you ate. A note that tells a son his father sounded tired. Thousands of small moments, done with consent and done well, become the most honest picture of health there is.</p>
+  </div>
+</section>
+
+<section id="engine" class="engine">
+  <div class="inner col gap40">
+    <div class="section-head ruled">
+      <h2>The Fimo Engine</h2>
+      <p>One platform under every product we ship. Each new product starts on day one with everything the last one learned.</p>
+    </div>
+    <div class="layers">
+      <div class="layer on" data-layer>
+        <div class="layer-head"><span class="layer-num">01</span><span class="layer-dot"></span></div>
+        <span class="layer-title">Listen</span>
+        <span class="layer-desc">Voice calls and chat in Indian languages. Works on any phone, even a basic keypad phone.</span>
+        <div class="layer-tags"><span>Voice</span><span>Any phone</span><span>Indian languages</span></div>
+      </div>
+      <div class="layer" data-layer>
+        <div class="layer-head"><span class="layer-num">02</span><span class="layer-dot"></span></div>
+        <span class="layer-title">Understand</span>
+        <span class="layer-desc">Memory of every conversation. Mood, medicines, sleep, food and early warning signs.</span>
+        <div class="layer-tags"><span>Memory</span><span>Signals</span><span>Risk flags</span></div>
+      </div>
+      <div class="layer" data-layer>
+        <div class="layer-head"><span class="layer-num">03</span><span class="layer-dot"></span></div>
+        <span class="layer-title">Act</span>
+        <span class="layer-desc">The right update to the right person. Family notes, urgent alerts, gentle nudges, care partners.</span>
+        <div class="layer-tags"><span>WhatsApp</span><span>Alerts</span><span>Nudges</span></div>
       </div>
     </div>
-  </section>
+    <div class="principles">
+      <span>Consent first</span><span>Language native</span><span>Works on any phone</span><span>Humans in the loop</span><span>Never asks for money or OTP</span>
+    </div>
+  </div>
+</section>
 
-  <section id="how" class="wrap section">
-    <h2>Two minutes to set up.</h2>
-    <ol class="steps">
-      <li><span class="num">1</span><p class="step-title">Add your parent</p><p class="muted">Name, number and language.</p></li>
-      <li><span class="num">2</span><p class="step-title">Pick morning or evening</p><p class="muted">After breakfast or after dinner.</p></li>
-      <li><span class="num">3</span><p class="step-title">Get your note</p><p class="muted">On WhatsApp, after every call.</p></li>
-    </ol>
-  </section>
-
-  <section id="pricing" class="band-line">
-    <div class="wrap split top">
-      <div class="col">
-        <h2>Made for parents who don't do apps.</h2>
-        <ul class="checks">
-          <li>Any phone, even basic</li>
-          <li>No app, no internet</li>
-          <li>Never asks for money or OTP</li>
-          <li>Alerts you in minutes if needed</li>
-        </ul>
+<section id="products" class="products">
+  <div class="inner col gap40">
+    <div class="section-head">
+      <h2>Built on the engine</h2>
+      <p>Two products live. More in the lab. Each one solves a real gap, and makes the engine stronger.</p>
+    </div>
+    <div class="product-grid">
+      <a href="https://checkin.fimolabs.com" class="product checkin">
+        <div class="product-top"><span class="mono-label">Live · Invite only</span><svg width="20" height="20" viewBox="0 0 14 14" aria-hidden="true"><path d="M4 10L10 4M5 4h5v5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+        <span class="product-name">Checkin</span>
+        <span class="product-desc">Daily calls for ageing parents. A WhatsApp note for the child who cares.</span>
+        <span class="product-url">checkin.fimolabs.com</span>
+      </a>
+      <a href="#" class="product oyesun" data-oyesun>
+        <div class="product-top"><span class="mono-label">Live</span><svg width="20" height="20" viewBox="0 0 14 14" aria-hidden="true"><path d="M4 10L10 4M5 4h5v5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+        <span class="product-name">Oyesun</span>
+        <span class="product-desc">A companion that understands your language, your mood and what matters to you.</span>
+        <span class="product-url" data-oyesun-url hidden></span>
+      </a>
+    </div>
+    <div class="col gap16">
+      <span class="mono-label muted">In the lab</span>
+      <div class="lab-grid">
+        <div class="lab-card"><span class="lab-tag">Exploring</span><span class="lab-title">After discharge</span><span class="lab-desc">Daily recovery check ins in the weeks after a hospital stay.</span></div>
+        <div class="lab-card"><span class="lab-tag">Exploring</span><span class="lab-title">Between visits</span><span class="lab-desc">Everyday support for sugar and BP patients, between doctor appointments.</span></div>
+        <div class="lab-card"><span class="lab-tag">Exploring</span><span class="lab-title">Living alone</span><span class="lab-desc">Company and quiet safety for people who live by themselves.</span></div>
       </div>
-      <div class="price-card">
-        <p class="accent strong">First 3 days free</p>
-        <p class="price"><span>₹499</span><span class="muted">per month</span></p>
-        <p class="muted">For one parent. About the price of a cup of chai a day.</p>
-        <button class="btn btn-block" type="button" data-open-access>Request an invite</button>
-        <p class="muted small center">UPI or card · Cancel anytime</p>
-      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="band-dark">
-    <div class="wrap narrow center">
-      <h2 class="final">Your call matters to them. <em>We'll help it happen.</em></h2>
-      <button class="btn btn-light btn-big" type="button" data-open-access>Get early access</button>
-      <p class="small dark-muted">No invite? <a class="founder-link light" href="#" target="_blank" rel="noopener">Message the founder on WhatsApp</a></p>
+<section id="roadmap" class="roadmap">
+  <div class="inner col gap48">
+    <h2>Where we're going</h2>
+    <div class="road">
+      <div class="road-col"><span class="road-when now"><span class="road-dot"></span>Now</span><span class="road-title">Families in India</span><span class="road-desc">Daily check ins for parents and companionship in Indian languages. Learn what care sounds like, every day.</span></div>
+      <div class="road-col"><span class="road-when"><span class="road-dot"></span>Next</span><span class="road-title">Care partners</span><span class="road-desc">Clinics, hospitals and insurers that want to know how people are doing between visits, with their consent.</span></div>
+      <div class="road-col"><span class="road-when"><span class="road-dot"></span>Later</span><span class="road-title">The everyday care layer</span><span class="road-desc">Every Indian language first, then every family that lives far from the people it loves.</span></div>
     </div>
-  </section>
-  <section class="band-line about">
-    <div class="wrap about-inner">
-      <p class="about-line"><span class="about-label">About</span>Fimo Labs builds simple, caring health products for Indian families.</p>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="inner col gap48">
+    <h2>Everyday care is the next big health platform. We're building it.</h2>
+    <div class="contact-grid">
+      <a href="mailto:pm.ferozmd@gmail.com?subject=Investing%20in%20Fimo%20Labs" class="contact-card"><span class="mono-label blue">Investors</span><span class="contact-title">See where this goes with us.</span><span class="contact-cta">Write to us →</span></a>
+      <a href="mailto:pm.ferozmd@gmail.com?subject=Partnering%20with%20Fimo%20Labs" class="contact-card"><span class="mono-label blue">Care partners</span><span class="contact-title">Clinics, hospitals and insurers.</span><span class="contact-cta">Write to us →</span></a>
+      <a href="mailto:pm.ferozmd@gmail.com?subject=Building%20with%20Fimo%20Labs" class="contact-card"><span class="mono-label blue">Builders</span><span class="contact-title">Engineers, designers, clinicians.</span><span class="contact-cta">Write to us →</span></a>
     </div>
-  </section>
+  </div>
+</section>
 </main>
-
-<footer class="wrap footer">
-  <span class="strong">© 2026 Fimo Labs</span>
-  <nav aria-label="Footer">
-    <a href="/contact">Contact</a>
-    <a href="/privacy">Privacy</a>
-    <a href="/terms">Terms</a>
-    <a href="/refunds">Refunds</a>
-  </nav>
-  <span class="muted">Made with care in India</span>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-about">
+        <div class="footer-brand">
+          <svg width="28" height="28" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="11" fill="none" stroke="#F5F4EF" stroke-width="3"></circle><circle cx="23.5" cy="6.5" r="4.5" fill="#FF6A3D" stroke="#0A0B0D" stroke-width="2"></circle></svg>
+          <span>Fimo Labs</span>
+        </div>
+        <span>Applied AI for everyday care. Built in India.</span>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <span class="mono-label">Products</span>
+          <a href="https://checkin.fimolabs.com">Checkin</a>
+          <a href="#" data-oyesun>Oyesun</a>
+        </div>
+        <div class="footer-col">
+          <span class="mono-label">Company</span>
+          <a href="#thesis">Thesis</a>
+          <a href="#engine">Engine</a>
+          <a href="#roadmap">Roadmap</a>
+        </div>
+        <div class="footer-col">
+          <span class="mono-label">Legal</span>
+          <a href="/contact">Contact</a>
+          <a href="/privacy">Privacy</a>
+          <a href="/terms">Terms</a>
+          <a href="/refunds">Refunds</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Fimo Labs is owned and run by <strong>Feroz</strong>, Product Manager. Contact: <a href="mailto:pm.ferozmd@gmail.com">pm.ferozmd@gmail.com</a></span>
+      <span>© 2026 Fimo Labs</span>
+    </div>
+  </div>
 </footer>
-
-<dialog id="access" aria-labelledby="accessTitle">
-  <button class="close" type="button" aria-label="Close" data-close-access>
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
-  </button>
-
-  <div class="step" data-step="code">
-    <p class="pill">Invite only</p>
-    <h3 id="accessTitle">Have an invite code?</h3>
-    <p class="muted">We're starting with a small group of families so every first call goes well.</p>
-    <form id="codeForm" novalidate>
-      <label for="code">Invite code</label>
-      <input id="code" name="code" type="text" autocomplete="off" autocapitalize="characters" placeholder="e.g. FAMILY2026" required>
-      <p class="error" id="codeError" role="alert" hidden>That code didn't work. Message the founder and we'll sort it out.</p>
-      <button class="btn btn-block" type="submit">Continue</button>
-    </form>
-    <div class="divider"><span>No code?</span></div>
-    <a class="btn btn-outline btn-block founder-link" href="#" target="_blank" rel="noopener">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-      Message the founder on WhatsApp</a>
-  </div>
-
-  <div class="step" data-step="form" hidden>
-    <p class="pill pill-green">Code accepted</p>
-    <h3>Tell us a little about you.</h3>
-    <form id="accessForm" name="early-access" method="POST">
-      <input type="hidden" name="invite-code" id="inviteCodeField">
-      <p hidden><label>Leave this empty <input name="_gotcha" tabindex="-1" autocomplete="off"></label></p>
-      <label for="fName">Your name</label>
-      <input id="fName" name="name" type="text" autocomplete="name" required>
-      <label for="fPhone">Your WhatsApp number</label>
-      <input id="fPhone" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="+91" required>
-      <label for="fCity">Where does your parent live?</label>
-      <input id="fCity" name="parent-city" type="text" placeholder="City" required>
-      <label for="fLang">Language they speak</label>
-      <select id="fLang" name="parent-language">
-        <option>Hindi</option><option>English</option><option>Telugu</option><option>Tamil</option><option>Kannada</option><option>Marathi</option><option>Bengali</option><option>Other</option>
-      </select>
-      <p class="error" id="formError" role="alert" hidden>Couldn't send that. Please message the founder on WhatsApp instead.</p>
-      <button class="btn btn-block" type="submit">Request my first call</button>
-    </form>
-  </div>
-
-  <div class="step center" data-step="done" hidden>
-    <p class="done-mark" aria-hidden="true">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-    </p>
-    <h3>You're on the list.</h3>
-    <p class="muted"><span class="founder-name">The founder</span> will message you on WhatsApp within a day to set up the first call.</p>
-    <button class="btn btn-block" type="button" data-close-access>Done</button>
-  </div>
-</dialog>
-
-<script src="checkin.js"></script>
+<script src="/site.js"></script>
 </body>
 </html>

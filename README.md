@@ -1,21 +1,11 @@
-# Parent Check In website
+# fimolabs.com
 
-## 1. Fill in your details (2 minutes)
-Open `script.js` and edit the settings at the top:
-- `FOUNDER_WHATSAPP`: your number with country code, digits only, e.g. `919845012345`
-- `INVITE_CODES`: the codes you'll hand out, e.g. `FAMILY2026`
+The Fimo Labs company site. Plain HTML, CSS and JavaScript, deployed by Vercel on every push to main.
 
-## 2. Put it online (free, 5 minutes)
-1. Go to https://app.netlify.com/drop
-2. Drag this whole folder onto the page
-3. Your site is live on a netlify.app link
+- `index.html`: the company homepage
+- `contact.html`, `privacy.html`, `terms.html`, `refunds.html`: contact and legal pages
+- `site.css`: all styles
+- `site.js`: the year grid and engine animations, plus the Oyesun link (set `OYESUN_URL` at the top)
+- `vercel.json`: clean URLs, so `/privacy` serves `privacy.html`
 
-## 3. See who signed up
-In Netlify: your site > Forms > early-access. You can turn on email alerts there for every new request.
-
-## 4. Use your own domain (later)
-Netlify > Domain management > Add a domain, e.g. checkin.yourbrand.in
-
-Notes
-- The invite codes are visible in the page source, so they're a gentle gate, not security.
-- The form only saves when the site is hosted on Netlify. On other hosts, swap in Formspree or a Google Form.
+Contact email everywhere: pm.ferozmd@gmail.com
