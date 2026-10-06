@@ -1,7 +1,7 @@
 // Fimo Labs site behaviour: the "year in health" grid and the engine highlight, as in the design.
 
-// Set this when Oyesun has a public link. Until then its card is not clickable and shows no URL.
-var OYESUN_URL = "";
+// Oyesun's public link. Clear it to make its card unclickable again and hide the URL.
+var OYESUN_URL = "https://oyesun.fimolabs.com";
 
 (function () {
   document.querySelectorAll("[data-oyesun]").forEach(function (a) {
