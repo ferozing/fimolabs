@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkin · Know they're okay. Every single morning.</title>
+  <meta name="description" content="Checkin calls your parent every day on their normal phone and sends you a WhatsApp note minutes later: how they are, their medicines, and what to ask them tonight.">
+  <meta property="og:title" content="Checkin · Know they're okay. Every single morning.">
+  <meta property="og:description" content="We call your parent every day on their normal phone. Minutes later, you get a note on WhatsApp: how they are, their medicines, and what to ask them tonight.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://checkin.fimolabs.com/">
+  <meta name="theme-color" content="#FBF6EC">
+  <link rel="icon" href="/checkin/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..700,0..100;1,9..144,400..700,0..100&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/checkin/checkin.css">
+</head>
+<body>
+
+<!-- ============ 1 HERO ============ -->
+<section class="hero">
+  <div class="inner">
+    <nav class="nav" aria-label="Main">
+      <a href="#top" class="brand">
+        <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="11" fill="#1E1B17"></rect><path d="M10 17.5l4.5 4.5L24 12.5" fill="none" stroke="#FFF3E4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="26" cy="8" r="4" fill="#E8743F"></circle></svg>
+        <span>checkin</span>
+      </a>
+      <div class="nav-links">
+        <a href="#note">The daily note</a>
+        <a href="#safety">Safety</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#start" class="nav-cta">Start free trial</a>
+      </div>
+    </nav>
+
+    <div id="top" class="hero-top">
+      <span class="badge">For everyone who lives far from their parents</span>
+      <h1>Know they're okay. <span class="em">Every single morning.</span></h1>
+      <p class="lead">We call your parent every day on their normal phone. Minutes later, you get a note on WhatsApp: how they are, their medicines, and what to ask them tonight.</p>
+    </div>
+
+    <div class="langstrip">
+      <span class="langstrip-title">Sona speaks <em>their</em> language</span>
+      <div class="langstrip-chips">
+        <span id="heroLangs" class="langstrip-langs"></span>
+        <span class="langstrip-more">+ more</span>
+      </div>
+    </div>
+
+    <div class="mornings">
+      <!-- their morning -->
+      <div class="card-morning theirs">
+        <div class="card-head">
+          <div class="card-head-l">
+            <span class="eyebrow warm">Their morning</span>
+            <span class="place"><svg width="18" height="22" viewBox="0 0 18 22" aria-hidden="true"><path d="M9 21s7-6.6 7-12A7 7 0 0 0 2 9c0 5.4 7 12 7 12z" fill="#E8743F"></path><circle cx="9" cy="9" r="2.6" fill="#FFE6D2"></circle></svg>Back home in <span id="homeCity">Bareilly</span></span>
+          </div>
+          <span class="clock" id="leftClock">9:00</span>
+        </div>
+        <div class="card-body">
+          <div class="keypad" id="keypad">
+            <div class="keypad-screen" id="kpScreen">
+              <span class="kp-top" id="kpTop">Incoming call</span>
+              <span class="kp-name">Checkin</span>
+              <span class="kp-bottom" id="kpBottom">ringing...</span>
+            </div>
+            <div class="keypad-keys" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+          <div class="chat" id="chatLines"></div>
+        </div>
+        <span class="card-cap" id="leftCap">His phone rings at the usual time. He just picks up.</span>
+      </div>
+
+      <!-- your morning -->
+      <div class="card-morning yours">
+        <div class="card-head">
+          <div class="card-head-l">
+            <span class="eyebrow">Your morning</span>
+            <span class="place"><svg width="18" height="22" viewBox="0 0 18 22" aria-hidden="true"><path d="M9 21s7-6.6 7-12A7 7 0 0 0 2 9c0 5.4 7 12 7 12z" fill="#1E1B17"></path><circle cx="9" cy="9" r="2.6" fill="#FBF6EC"></circle></svg>Far away in <span id="childCity">Pune</span></span>
+          </div>
+          <span class="clock" id="rightClock">9:01</span>
+        </div>
+        <div class="card-body">
+          <div class="phone">
+            <div class="phone-screen" id="phoneScreen">
+              <div class="lock">
+                <span class="lock-date">Thursday, 9 October</span>
+                <span class="lock-time" id="lockClock">9:01</span>
+                <span class="lock-sub">Standup in 20 min</span>
+              </div>
+              <div class="banner">
+                <span class="banner-icon"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3L12.5 5" fill="none" stroke="#FBF6EC" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+                <div class="banner-copy">
+                  <span class="banner-app">Checkin <span>· WhatsApp · now</span></span>
+                  <span id="bannerText">Papa is doing well today. Tap to read your note.</span>
+                </div>
+              </div>
+              <div class="wa">
+                <div class="wa-bar">
+                  <span class="wa-avatar"><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3L12.5 5" fill="none" stroke="#1E1B17" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+                  <span class="wa-name">Checkin</span>
+                </div>
+                <div class="wa-body">
+                  <div class="wa-note">
+                    <span class="pill-good">All good today</span>
+                    <span><strong>Medicines:</strong> <span id="noteMeds"></span></span>
+                    <span><strong>Mood:</strong> <span id="noteMood"></span></span>
+                    <span><strong>Food:</strong> <span id="noteFood"></span></span>
+                    <span class="wa-ask"><strong id="noteAskLabel">Ask him tonight</strong>: <span id="noteAsk"></span></span>
+                    <span class="wa-time" id="noteTime">9:08 am</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="card-cap" id="rightCap">You're getting ready for work.</span>
+      </div>
+    </div>
+
+    <div class="steps" id="steps"></div>
+
+    <div class="hero-cta">
+      <a href="#start" class="btn-orange">Start your 3 day free trial</a>
+      <span class="hero-cta-note"><b>No app for them. No app for you. Set up in 5 minutes.</b></span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2 THE NOTE ============ -->
+<section id="note" class="section note-section">
+  <div class="inner split">
+    <div class="split-l">
+      <span class="eyebrow warm">One week with Checkin</span>
+      <h2>Not "I'm fine, beta". <span class="em">The real answer.</span></h2>
+      <p class="body">Parents say they're fine so you don't worry. Sona listens closer. Tap a day and see what you would have known.</p>
+      <div class="days" id="dayPicker" role="group" aria-label="Pick a day"></div>
+      <div class="legend">
+        <span><i class="dot good"></i>All good</span>
+        <span><i class="dot amber"></i>Worth a call</span>
+        <span><i class="dot missed"></i>Didn't pick up</span>
+      </div>
+    </div>
+    <div class="split-r">
+      <div class="daycard">
+        <div class="daycard-head">
+          <span class="status" id="dayStatus">All good today</span>
+          <span class="daycard-when" id="dayWhen">Thursday · 9:08 am</span>
+        </div>
+        <span class="daycard-headline" id="dayHeadline"></span>
+        <div class="rows" id="dayRows"></div>
+        <div class="askbox" id="dayAskBox">
+          <span class="askbox-label" id="dayAskLabel">Ask her tonight</span>
+          <span class="askbox-text" id="dayAsk"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3 THE CALL ============ -->
+<section class="section sona-section">
+  <div class="inner sona">
+    <div class="sona-l">
+      <span class="eyebrow warm">Meet Sona</span>
+      <h2>A call they actually look forward to.</h2>
+      <p class="body">Sona is our warm voice companion. She calls at the same time every day, talks in their language, remembers yesterday, and never rushes. Sona always says she's an assistant calling on your behalf.</p>
+      <div class="tags">
+        <span class="tag">Any phone, even a landline</span>
+        <span class="tag">Morning or evening</span>
+        <span class="tag">5 to 8 minutes</span>
+      </div>
+    </div>
+    <div class="sona-r">
+      <div class="sona-langs" id="sonaLangs"></div>
+      <div class="quote">
+        <div class="quote-head">
+          <span class="avatar">S</span>
+          <div class="quote-who">
+            <span class="quote-name">Sona</span>
+            <span class="quote-sub">speaking <span id="sonaLangName">Telugu</span></span>
+          </div>
+          <div class="bars" id="bars" aria-hidden="true"></div>
+        </div>
+        <span class="quote-line" id="sonaLine"></span>
+        <span class="quote-tr" id="sonaTr"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4 SAFETY ============ -->
+<section id="safety" class="section">
+  <div class="inner safety">
+    <div class="safety-head">
+      <h2>If something's wrong, <span class="em">you know in minutes.</span></h2>
+      <p class="body">Calm on the good days. Fast on the bad ones. Never alarming without a reason.</p>
+    </div>
+    <div class="safety-cards">
+      <div class="scard red">
+        <span class="scard-pill">Please call now</span>
+        <span class="scard-quote">"Papa mentioned chest discomfort on today's call."</span>
+        <span class="scard-body">Sona asked him to sit and rest and told him you'd call. You get this on WhatsApp the moment the call ends.</span>
+      </div>
+      <div class="scard amber">
+        <span class="scard-pill">Worth a call today</span>
+        <span class="scard-quote">"Skipped the evening tablet. Knee is hurting again."</span>
+        <span class="scard-body">The small things that never come up on a two minute call home, flagged before they grow.</span>
+      </div>
+      <div class="scard grey">
+        <span class="scard-pill">Didn't pick up</span>
+        <span class="scard-quote">"No answer at 9:00, 9:15 and 9:30."</span>
+        <span class="scard-body">We try three times, then tell you, so silence never goes unnoticed.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5 SETUP + PRICE ============ -->
+<section id="pricing" class="section">
+  <div class="inner pricing">
+    <div class="setup">
+      <h2>Two minutes to set up. <span class="em">Nothing for them to learn.</span></h2>
+      <div class="setup-steps">
+        <div class="setup-step">
+          <span class="num">1</span>
+          <span class="setup-title">Add your parent</span>
+          <span class="setup-body">Their name, number, language and what you call them.</span>
+        </div>
+        <div class="setup-step">
+          <span class="num">2</span>
+          <span class="setup-title">Pick a time</span>
+          <span class="setup-body">After breakfast or in the evening. Add medicines to check on.</span>
+        </div>
+        <div class="setup-step">
+          <span class="num">3</span>
+          <span class="setup-title">Read it on WhatsApp</span>
+          <span class="setup-body">Your first note arrives tomorrow morning. That's it.</span>
+        </div>
+      </div>
+    </div>
+    <div class="price">
+      <span class="price-eyebrow">Per parent</span>
+      <span class="price-amount">₹399<span> / month</span></span>
+      <span class="price-body">A daily call, a daily note, instant alerts.<br>Cancel anytime.</span>
+      <a href="#start" class="price-cta">First 3 days free</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6 FINAL CTA ============ -->
+<section id="start" class="final">
+  <div class="final-inner">
+    <h2>You can't be there every morning. <span class="em">Now someone is.</span></h2>
+    <p class="final-lead"><b>"Checkin"</b> is invite only while we grow carefully. Have a code? Start your free trial now!</p>
+    <form class="codebox" id="codeForm" novalidate>
+      <label for="code" class="sr-only">Invite code</label>
+      <input id="code" name="code" type="text" placeholder="Enter invite code" autocomplete="off" spellcheck="false">
+      <button type="submit">Start free trial</button>
+    </form>
+    <p class="code-ok" id="codeOk" hidden role="status">Code accepted. Let's set up your parent's first call.</p>
+    <a class="wa-link" href="https://wa.me/919629381945">
+      <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 15l1-3.2A6.5 6.5 0 1 1 6.6 14z" fill="none" stroke="#F6C8A8" stroke-width="1.6" stroke-linejoin="round"></path></svg>
+      <span>No code? Message our team on WhatsApp</span>
+    </a>
+  </div>
+  <footer class="foot">
+    <span>checkin · a <a href="https://fimolabs.com">Fimo Labs</a> product</span>
+    <span><a href="https://fimolabs.com/privacy">Privacy</a> · <a href="https://fimolabs.com/terms">Terms</a> · <a href="https://fimolabs.com/refunds">Refunds</a> · <a href="https://fimolabs.com/contact">Contact</a></span>
+  </footer>
+</section>
+
+<script src="/checkin/checkin.js"></script>
+</body>
+</html>
