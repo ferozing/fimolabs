@@ -1,25 +1,6 @@
 // Fimo Labs site behaviour: the "year in health" grid and the engine highlight, as in the design.
 
-// Oyesun's public link. Clear it to make its card unclickable again and hide the URL.
-var OYESUN_URL = "https://oyesun.fimolabs.com";
-
 (function () {
-  document.querySelectorAll("[data-oyesun]").forEach(function (a) {
-    if (OYESUN_URL) {
-      a.href = OYESUN_URL;
-    } else {
-      a.removeAttribute("href");
-      a.setAttribute("aria-disabled", "true");
-      a.style.cursor = "default";
-    }
-  });
-  document.querySelectorAll("[data-oyesun-url]").forEach(function (el) {
-    if (OYESUN_URL) {
-      el.textContent = OYESUN_URL.replace(/^https?:\/\//, "");
-      el.hidden = false;
-    }
-  });
-
   var grid = document.getElementById("yearGrid");
   var dayEl = document.getElementById("yearDay");
   var layers = document.querySelectorAll("[data-layer]");
